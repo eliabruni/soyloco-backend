@@ -1,0 +1,27 @@
+<html>
+    <body>
+        PLACE<br>
+        <ul>
+            <li> name: {{ place.name}} </li><br>
+            <li> description: {{ place.description }} </li><br>
+            <li> icon: ... </li><br>
+            <li> type: {{ place.place_type }} </li><br>
+            <li> location city: {{ place.location.city }} </li><br>
+            <li> location street: {{ place.location.street }} </li><br>
+            <li> location latitude: {{ place.location.gps_location.latitude }} </li><br>
+            <li> location longitude: {{ place.location.gps_location.longitude }} </li><br>         
+        </ul>
+        EVENTS<br>
+        <ul>
+            {% for event in events %}
+                <li><a href="/webevents/{{ event.fid }}">{{ event.name</a></li><br>
+            {% endfor %}
+        </ul>
+        LIKES<br>
+        <ul>
+            {% for like in likes %}
+                <li><a href="/webusers/{{ like.source }}">{{ like.source</a></li><br>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

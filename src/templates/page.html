@@ -1,0 +1,15 @@
+<html>
+    <body>
+        PAGE<br>
+        <ul>
+            <li> name: {{ page.name }} </li><br>
+            <li> icon: ... </li><br>
+        </ul>
+        PAGE likes<br>
+        <ul>
+            {% for like in likes %}
+                <li><a href="/webusers/{{ like.source }}"> {{ like.source }} </a></li><br>
+            {% endfor %}
+        </ul>        
+    </body>
+</html>

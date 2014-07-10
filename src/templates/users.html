@@ -1,0 +1,10 @@
+<html>
+    <body>
+        USERS<br>
+        <ul>
+            {% for user in users %}
+                <li> <a href="/webusers/{{ user.fid }}">{{ user.first_name}} {{ user.last_name }}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

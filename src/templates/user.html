@@ -1,0 +1,40 @@
+<html>
+    <body>
+        USER profile<br>
+        <ul>
+            <li> first name: {{ user.first_name }} </li><br>
+            <li> last name: {{ user.last_name }} </li><br>
+            <li> gender: {{ user.gender }} </li><br>
+            <li> age: {{ user.age }} </li><br>
+            <li> gps location: {{ user.gps_location }} </li><br>
+            <li> radius: {{ user.radius }} </li><br>
+            <li> photos:
+                {% for photo in user.photos %}
+                    {{ photo }},
+                {% endfor %}</li><br>
+            <li> profile_photo: {{ user.profile_photo }} </li><br>
+            <li> pages:
+                {% for page in user.pages %}
+                    {{ page }},
+                {% endfor %}</li><br>
+        </ul>
+        USER friends<br>
+        <ul>
+            {% for friend in friends %}
+                <li>{{ friend.destination }}</li><br>
+            {% endfor %}
+        </ul>
+        USER swipes<br>
+        <ul>
+            {% for swipe in swiped %}
+                <li>{{ swipe.destination }} -- {{ swipe.swipe_type }}</li><br>
+            {% endfor %}
+        </ul>        
+        USER swiped<br>
+        <ul>
+            {% for swipe in swiped_by %}
+                <li>{{ swipe.source }} -- {{ swipe.swipe_type }}</li><br>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

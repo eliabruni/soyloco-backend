@@ -1,0 +1,12 @@
+<html>
+    <body>
+        PAGES<br>
+        <ul>
+            {% for page in pages %}
+                <li> <a href="/webpages/{{ page.fid }}">{{ page.fid }}</a></li><br>
+                <li> name: {{ page.name }}</li><br>
+                <li> icon: ... </li><br>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

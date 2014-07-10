@@ -1,0 +1,10 @@
+<html>
+    <body>
+        EVENTS<br>
+        <ul>
+            {% for event in events %}
+                <li> <a href="/webevents/{{ event.fid }}">{{ event.name }}</a></li><br>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

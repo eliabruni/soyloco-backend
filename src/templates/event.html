@@ -1,0 +1,18 @@
+<html>
+    <body>
+        EVENT<br>
+        <ul>
+            <li> name: {{ event.name }} </li><br>
+            <li> description: {{ event.description }} </li><br>
+            <li> place: <a href="/webplaces/{{ event.place }}">{{ event.place }}</a></li><br>
+            <li> start time: {{ event.start_time }} </li><br>
+            <li> end time: {{ event.end_time }} </li><br>
+        RSVPS<br>
+        <ul>
+            {% for rsvp in rsvps %}
+                <li>user: <a href="/webusers/{{ rsvp.user }}"> {{ rsvp.user} </a></li><br>
+                <li>rsvp: {{ rsvp.rsvp }}</li><br>                
+            {% endfor %}
+        </ul>
+    </body>
+</html>

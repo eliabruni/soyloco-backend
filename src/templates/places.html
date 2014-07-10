@@ -1,0 +1,10 @@
+<html>
+    <body>
+        PLACES<br>
+        <ul>
+            {% for place in places %}
+                <li> <a href="/webplaces/{{ place.fid }}">{{ place.name }}</a></li><br>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
